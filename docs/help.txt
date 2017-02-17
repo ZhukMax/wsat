@@ -1,0 +1,8 @@
+#------------------------#
+# Web Server Admin Tools #
+#------------------------#
+
+Description: Bash file for help with web server
+License: Apache-2.0
+Author: Zhuk Max <zhukmax@ya.ru>
+
