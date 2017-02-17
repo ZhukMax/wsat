@@ -29,3 +29,28 @@ fi
 if [ ! -d ./mhost ]; then
 	git clone https://github.com/ZhukMax/mhost.git
 fi
+
+# Keys for script
+while [ 1 ] ; do
+	if [ "$1" = "install" ] ; then
+		install
+	elif [ "$1" = "add" ] ; then
+		addHost
+	elif [ "$1" = "--help" ] ; then
+		echoHelp $BASEDIR/docs/help.txt
+	elif [ "$1" = "-h" ] ; then
+		echoHelp $BASEDIR/docs/help.txt
+	elif [ -z "$1" ] ; then
+		break
+	else
+		echo "Error: unknown key" 1>&2
+		exit 1
+	fi
+	shift
+done
+
+function install() {
+}
+
+function addHost() {
+}
