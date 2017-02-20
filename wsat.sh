@@ -50,6 +50,7 @@ while [ 1 ] ; do
 done
 
 function install() {
+	server/PhalconServer.sh -m
 }
 
 function addHost() {
