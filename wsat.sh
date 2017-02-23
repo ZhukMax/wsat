@@ -19,15 +19,19 @@ if [ $? -ne 0 ] ; then echo "Error: can't import $lib" 1>&2 ; exit 1 ; fi
 
 if [ ! -d ./server ]; then
 	git clone https://github.com/ZhukMax/PhalconServer.git server
+	sudo chmod +x server/phserver.sh
 fi
 if [ ! -d ./phost ]; then
 	git clone https://github.com/ZhukMax/phost.git
+	sudo chmod +x ./phost/phost.sh
 fi
 if [ ! -d ./yiihost ]; then
 	git clone https://github.com/ZhukMax/yiihost.git
+	sudo chmod +x ./yiihost/yiihost.sh
 fi
 if [ ! -d ./mhost ]; then
 	git clone https://github.com/ZhukMax/mhost.git
+	sudo chmod +x ./mhost/mhost.sh
 fi
 
 # Keys for script
@@ -50,6 +54,7 @@ while [ 1 ] ; do
 done
 
 function install() {
+	sudo ./server/phserver.sh
 }
 
 function addHost() {
