@@ -54,7 +54,11 @@ while [ 1 ] ; do
 done
 
 function install() {
+<<<<<<< HEAD
 	sudo ./server/phserver.sh
+=======
+	server/PhalconServer.sh -m
+>>>>>>> bb7efa0ae8a16d48505bd88621076d87a5408bbd
 }
 
 function addHost() {
