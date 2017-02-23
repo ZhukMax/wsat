@@ -34,6 +34,14 @@ if [ ! -d ./mhost ]; then
 	sudo chmod +x ./mhost/mhost.sh
 fi
 
+apt-get install dialog
+
+DIALOG=dialog
+
+InfoDialog() {
+    $DIALOG --msgbox "$1" 5 70
+}
+
 # Keys for script
 while [ 1 ] ; do
 	if [ "$1" = "install" ] ; then
@@ -54,11 +62,7 @@ while [ 1 ] ; do
 done
 
 function install() {
-<<<<<<< HEAD
 	sudo ./server/phserver.sh
-=======
-	server/PhalconServer.sh -m
->>>>>>> bb7efa0ae8a16d48505bd88621076d87a5408bbd
 }
 
 function addHost() {
